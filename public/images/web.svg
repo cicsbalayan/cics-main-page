@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Web development project">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="150" y="120" width="900" height="460" rx="20" fill="#eef2ff" stroke="#c7d2fe" stroke-width="4"/>
+  <circle cx="200" cy="168" r="10" fill="#f87171"/>
+  <circle cx="232" cy="168" r="10" fill="#facc15"/>
+  <circle cx="264" cy="168" r="10" fill="#4ade80"/>
+  <rect x="170" y="250" width="860" height="220" rx="12" fill="#c7d2fe"/>
+  <rect x="200" y="290" width="320" height="30" rx="15" fill="#a5b4fc"/>
+  <rect x="200" y="350" width="260" height="30" rx="15" fill="#a5b4fc"/>
+  <rect x="200" y="410" width="400" height="30" rx="15" fill="#818cf8"/>
+  <rect x="620" y="290" width="380" height="150" rx="12" fill="#818cf8"/>
+  <circle cx="660" cy="330" r="22" fill="#eef2ff"/>
+  <rect x="700" y="308" width="270" height="22" rx="11" fill="#eef2ff"/>
+  <rect x="700" y="360" width="220" height="22" rx="11" fill="#e0e7ff"/>
+  <text x="600" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Student Web Projects</text>
+</svg>

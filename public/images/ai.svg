@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Artificial intelligence project">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#134e4a"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="600" cy="320" r="150" fill="#042f2e" stroke="#2dd4bf" stroke-width="6"/>
+  <circle cx="600" cy="320" r="100" fill="none" stroke="#2dd4bf" stroke-opacity="0.6" stroke-width="4" stroke-dasharray="18 14"/>
+  <circle cx="600" cy="320" r="46" fill="#2dd4bf"/>
+  <circle cx="486" cy="270" r="12" fill="#5eead4"/>
+  <circle cx="714" cy="270" r="12" fill="#5eead4"/>
+  <circle cx="486" cy="380" r="12" fill="#5eead4"/>
+  <circle cx="714" cy="380" r="12" fill="#5eead4"/>
+  <path d="M 600 320 L 486 270 M 600 320 L 714 270 M 600 320 L 486 380 M 600 320 L 714 380" stroke="#5eead4" stroke-width="3" stroke-opacity="0.7"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">AI &amp; ML Research</text>
+</svg>

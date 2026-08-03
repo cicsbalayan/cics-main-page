@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Capstone project presentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#431407"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="140" y="140" width="360" height="420" rx="16" fill="#fef3c7"/>
+  <rect x="180" y="200" width="280" height="26" rx="13" fill="#fcd34d"/>
+  <rect x="180" y="250" width="220" height="26" rx="13" fill="#fde68a"/>
+  <rect x="180" y="300" width="250" height="26" rx="13" fill="#fde68a"/>
+  <path d="M230 470 l120 -80 l60 40 l130 -110" stroke="#d97706" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="700" y="140" width="360" height="420" rx="16" fill="#fef3c7"/>
+  <rect x="740" y="200" width="280" height="26" rx="13" fill="#fcd34d"/>
+  <rect x="740" y="250" width="240" height="26" rx="13" fill="#fde68a"/>
+  <rect x="740" y="300" width="260" height="26" rx="13" fill="#fde68a"/>
+  <path d="M790 470 l120 -80 l60 40 l130 -110" stroke="#d97706" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Capstone Showcase</text>
+</svg>
