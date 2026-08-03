@@ -1,7 +1,7 @@
 import { buttonVariants } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 import { cn } from "@/lib/utils"
-import { college } from "@/lib/data"
+import { college, site } from "@/data"
 import { RiArrowRightLine, RiTeamLine } from "@remixicon/react"
 
 export function Cta() {
@@ -23,12 +23,10 @@ export function Cta() {
                 <RiTeamLine className="size-6" />
               </div>
               <h2 className="font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-                Become part of the CICS family
+                {site.cta.title}
               </h2>
               <p className="text-pretty text-primary-foreground/80">
-                Join our student organizations, participate in hackathons and
-                seminars, or simply say hello. There&apos;s always a place for
-                passionate students at {college.campus}.
+                {site.cta.description}
               </p>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                 <a
@@ -37,7 +35,7 @@ export function Cta() {
                     buttonVariants({ size: "lg", variant: "secondary" })
                   )}
                 >
-                  Get in Touch
+                  {site.cta.primaryButton}
                   <RiArrowRightLine data-icon="inline-end" />
                 </a>
                 <a
@@ -52,7 +50,7 @@ export function Cta() {
                     "border-white/30 bg-transparent text-primary-foreground hover:bg-white/10 hover:text-primary-foreground"
                   )}
                 >
-                  Follow on Facebook
+                  {site.cta.secondaryButton}
                 </a>
               </div>
             </div>

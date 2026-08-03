@@ -21,7 +21,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { announcements } from "@/lib/data"
+import { announcements, site } from "@/data"
 import type { Announcement } from "@/lib/types"
 import { RiCalendarEventLine, RiUserStarLine } from "@remixicon/react"
 
@@ -37,9 +37,9 @@ export function Announcements({ items = announcements }: AnnouncementsProps) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <SectionHeading
-            badge="Announcements"
-            title="News and updates from CICS"
-            description="Stay up to date with enrollment schedules, events, seminars, and student activities. Click any post to read the full story."
+            badge={site.announcements.badge}
+            title={site.announcements.title}
+            description={site.announcements.description}
           />
         </Reveal>
 
@@ -103,9 +103,7 @@ export function Announcements({ items = announcements }: AnnouncementsProps) {
                 <p className="text-base text-foreground">{selected.excerpt}</p>
                 <p className="text-muted-foreground">{selected.body}</p>
                 <p className="text-muted-foreground">
-                  For inquiries, visit the CICS office during office hours or
-                  reach out to us through the contact details at the bottom of
-                  this page.
+                  {site.announcements.dialogFooter}
                 </p>
               </div>
             </DialogContent>

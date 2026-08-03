@@ -4,8 +4,13 @@ import Image from "next/image"
 
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { site } from "@/data"
 import type { Announcement } from "@/lib/types"
-import { RiArrowRightLine, RiCalendarEventLine, RiUserStarLine } from "@remixicon/react"
+import {
+  RiArrowRightLine,
+  RiCalendarEventLine,
+  RiUserStarLine,
+} from "@remixicon/react"
 
 export function AnnouncementCard({
   announcement,
@@ -48,7 +53,7 @@ export function AnnouncementCard({
           onClick={() => onRead(announcement)}
           className="mt-auto inline-flex w-fit items-center gap-1 text-sm font-medium text-primary hover:underline"
         >
-          Read more
+          {site.announcements.readMore}
           <RiArrowRightLine className="size-4" />
         </button>
       </CardContent>

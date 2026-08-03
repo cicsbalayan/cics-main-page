@@ -1,4 +1,4 @@
-import { navLinks, college, programs } from "@/lib/data"
+import { navLinks, college, programs, site, links } from "@/data"
 import {
   RiFacebookCircleLine,
   RiGithubLine,
@@ -14,13 +14,14 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2.5">
               <span className="flex size-9 items-center justify-center rounded-xl bg-primary font-heading text-sm font-bold text-primary-foreground">
-                C
+                {college.shortName.charAt(0)}
               </span>
-              <span className="font-heading text-sm font-semibold">CICS</span>
+              <span className="font-heading text-sm font-semibold">
+                {college.shortName}
+              </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              The student body and academic programs of the {college.name},{" "}
-              {college.university}, {college.tagline} — {college.campus}.
+              {site.footer.description}
             </p>
             <div className="mt-5 flex items-center gap-2">
               <a
@@ -45,7 +46,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-semibold">Navigate</h3>
+            <h3 className="font-heading text-sm font-semibold">
+              {site.footer.navigate}
+            </h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -61,12 +64,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-semibold">Programs</h3>
+            <h3 className="font-heading text-sm font-semibold">
+              {site.footer.programs}
+            </h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {programs.map((program) => (
                 <li key={program.code}>
                   <a
-                    href="#about"
+                    href={links.sections.about}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {program.code} · {program.title.replace("BS in ", "")}
@@ -80,7 +85,7 @@ export function Footer() {
                   rel="noreferrer"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  CICS Balayan on Facebook
+                  {site.footer.facebook}
                 </a>
               </li>
               <li>
@@ -90,14 +95,16 @@ export function Footer() {
                   rel="noreferrer"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  CICS on GitHub
+                  {site.footer.github}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-semibold">Contact</h3>
+            <h3 className="font-heading text-sm font-semibold">
+              {site.footer.contact}
+            </h3>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <RiMapPin2Line className="mt-0.5 size-4 shrink-0" />
@@ -118,7 +125,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {college.name}. All rights reserved.
+            © {new Date().getFullYear()} {college.name}. {site.footer.rights}
           </p>
           <p>
             {college.university} · {college.tagline}

@@ -3,19 +3,23 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { navLinks } from "@/lib/data"
+import { navLinks, college, site, links } from "@/data"
 import { RiCloseLine, RiMenuLine } from "@remixicon/react"
 import { buttonVariants } from "@/components/ui/button"
 
 function Logo() {
   return (
-    <a href="#home" className="flex items-center gap-2.5">
+    <a href={links.sections.home} className="flex items-center gap-2.5">
       <span className="flex size-9 items-center justify-center rounded-xl bg-primary font-heading text-sm font-bold text-primary-foreground">
-        C
+        {college.shortName.charAt(0)}
       </span>
       <span className="flex flex-col leading-tight">
-        <span className="font-heading text-sm font-semibold">CICS</span>
-        <span className="text-[11px] text-muted-foreground">BSU Balayan</span>
+        <span className="font-heading text-sm font-semibold">
+          {college.shortName}
+        </span>
+        <span className="text-[11px] text-muted-foreground">
+          {site.header.logoTagline}
+        </span>
       </span>
     </a>
   )
@@ -43,13 +47,13 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#contact"
+            href={links.sections.contact}
             className={cn(
               buttonVariants({ size: "sm" }),
               "hidden md:inline-flex"
             )}
           >
-            Join Us
+            {site.header.join}
           </a>
           <button
             type="button"
@@ -82,11 +86,11 @@ export function SiteHeader() {
             ))}
             <li className="pt-2">
               <a
-                href="#contact"
+                href={links.sections.contact}
                 onClick={() => setOpen(false)}
                 className={cn(buttonVariants(), "w-full")}
               >
-                Join Us
+                {site.header.join}
               </a>
             </li>
           </ul>

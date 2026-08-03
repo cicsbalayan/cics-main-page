@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { WorkCard } from "@/components/work-card"
 import { cn } from "@/lib/utils"
-import { college, works } from "@/lib/data"
+import { college, works, site } from "@/data"
 import type { Work } from "@/lib/types"
 import { RiGithubFill, RiArrowRightLine } from "@remixicon/react"
 
@@ -18,9 +18,9 @@ export function Works({ items = works }: WorksProps) {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>
             <SectionHeading
-              badge="Student Works"
-              title="Projects built by CICS students"
-              description="From capstone theses to passion projects, explore the innovative work our students produce every year."
+              badge={site.works.badge}
+              title={site.works.title}
+              description={site.works.description}
             />
           </Reveal>
           <Reveal delay={150} className="shrink-0">
@@ -31,7 +31,7 @@ export function Works({ items = works }: WorksProps) {
               className={cn(buttonVariants({ variant: "outline" }))}
             >
               <RiGithubFill />
-              Explore on GitHub
+              {site.works.exploreButton}
             </a>
           </Reveal>
         </div>
@@ -52,7 +52,7 @@ export function Works({ items = works }: WorksProps) {
               rel="noreferrer"
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
-              View more works
+              {site.works.viewMore}
               <RiArrowRightLine data-icon="inline-end" />
             </a>
           </Reveal>

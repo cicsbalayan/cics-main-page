@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
-import { programs } from "@/lib/data"
+import { programs, site } from "@/data"
 import type { Program } from "@/lib/types"
 import {
   RiArrowRightSLine,
@@ -34,9 +34,9 @@ export function Programs({ items = programs }: ProgramsProps) {
         <Reveal>
           <SectionHeading
             align="center"
-            badge="Academic Program"
-            title="One focused path to a career in IT"
-            description="The college offers a single four-year program at Balayan Campus — a curriculum built on strong fundamentals, hands-on projects, and industry exposure so graduates are ready to hit the ground running."
+            badge={site.programs.badge}
+            title={site.programs.title}
+            description={site.programs.description}
           />
         </Reveal>
 
@@ -65,7 +65,7 @@ export function Programs({ items = programs }: ProgramsProps) {
               <Card className="h-full transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="flex h-full flex-col gap-3">
                   <h4 className="font-heading text-sm font-semibold">
-                    What you&apos;ll learn
+                    {site.programs.learnLabel}
                   </h4>
                   <ul className="flex flex-col gap-2.5">
                     {program.specializations.map((item) => (
@@ -86,7 +86,7 @@ export function Programs({ items = programs }: ProgramsProps) {
               <Card className="h-full transition-all hover:-translate-y-1 hover:shadow-lg">
                 <CardContent className="flex h-full flex-col gap-3">
                   <h4 className="font-heading text-sm font-semibold">
-                    Where you can go
+                    {site.programs.careerLabel}
                   </h4>
                   <ul className="flex flex-col gap-2.5">
                     {program.careerPaths.map((career) => (
