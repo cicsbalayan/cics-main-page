@@ -5,6 +5,8 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Programs } from "@/components/programs"
+import { Services } from "@/components/services"
+import { Officers } from "@/components/officers"
 import { LazyAnnouncements } from "@/components/lazy-announcements"
 import { SectionSkeleton } from "@/components/section-skeleton"
 
@@ -27,10 +29,12 @@ export default function Page() {
         <Hero />
         <About />
         <Programs />
+        <Services />
         <LazyAnnouncements />
         <Suspense fallback={<SectionSkeleton cardCount={3} />}>
           <Works />
         </Suspense>
+        <Officers />
         <Suspense fallback={<SectionSkeleton cardCount={1} />}>
           <Cta />
         </Suspense>

@@ -30,6 +30,22 @@ export type Program = {
   careerPaths: string[]
 }
 
+export type Service = {
+  id: string
+  title: string
+  description: string
+  icon: "enrollment" | "learning" | "library" | "support" | "guidance" | "research"
+  href?: string
+}
+
+export type Officer = {
+  id: string
+  name: string
+  position: string
+  image?: string
+  portfolio?: string
+}
+
 export type College = {
   name: string
   shortName: string

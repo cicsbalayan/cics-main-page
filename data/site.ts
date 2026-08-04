@@ -58,6 +58,21 @@ export const site = {
     footer:
       "For inquiries, visit the CICS office during office hours or reach out to us through the contact details at the bottom of this page.",
   },
+  services: {
+    badge: "Services",
+    title: "Student services for every CICS student",
+    description:
+      "A growing lineup of services designed to support students from enrollment to graduation. Links and details are on the way.",
+    comingSoon: "Coming Soon",
+  },
+  officers: {
+    badge: "Student Council",
+    title: "Meet the officers of this term",
+    description:
+      "The CICS Student Council officers working to serve, represent, and build the college community this academic year.",
+    term: "AY 2026-2027",
+    portfolioLabel: "View Portfolio",
+  },
   works: {
     badge: "Student Works",
     title: "Projects built by CICS students",

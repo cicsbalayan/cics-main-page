@@ -1,0 +1,88 @@
+import type { Officer } from "@/lib/types"
+
+export const officers: Officer[] = [
+  {
+    id: "officer-1",
+    name: "Jasper Rosales",
+    position: "President",
+    image: "/images/jay-fav.jpg",
+    portfolio: "https://portfolio-x-asper.vercel.app",
+  },
+  {
+    id: "officer-2",
+    name: "John Patrick Ramirez",
+    position: "Vice President",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-3",
+    name: "Ashley Kim Edaniol",
+    position: "Secretary General",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-4",
+    name: "Sarah Macalalad",
+    position: "Deputy Secretary General",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-5",
+    name: "Aaron James Ramos",
+    position: "Finance Officer",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-6",
+    name: "Jasmin Chloe De Leola",
+    position: "Deputy Finance Officer",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-7",
+    name: "Rochelle De Asis",
+    position: "Auditor",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-8",
+    name: "Yhuan Miguelle Domingo",
+    position: "Public Relations Officer",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-9",
+    name: "John Ramwell Dimazana",
+    position: "Business Manager",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-10",
+    name: "Margaret Maullon",
+    position: "Committee on Media Affairs",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-11",
+    name: "Geoffrey Sanchez ",
+    position: "Committee on Creative Design",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+  {
+    id: "officer-12",
+    name: "John Harry Casanova",
+    position: "Committee on Publicity",
+    image: "/images/coming-soon.png",
+    portfolio: "https://example.com",
+  },
+]

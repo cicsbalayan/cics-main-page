@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { WorkCard } from "@/components/work-card"
 import { cn } from "@/lib/utils"
-import { college, works, site } from "@/data"
+import { college, works, site, links } from "@/data"
 import type { Work } from "@/lib/types"
 import { RiGithubFill, RiArrowRightLine } from "@remixicon/react"
 
@@ -47,7 +47,7 @@ export function Works({ items = works }: WorksProps) {
         <div className="mt-10 flex justify-center">
           <Reveal>
             <a
-              href={college.github}
+              href={links.showcase}
               target="_blank"
               rel="noreferrer"
               className={cn(buttonVariants({ variant: "ghost" }))}

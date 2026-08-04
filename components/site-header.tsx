@@ -17,6 +17,7 @@ function Logo() {
         width={36}
         height={36}
         loading="eager"
+        priority
         className="size-9 object-contain [filter:drop-shadow(0_0_8px_color-mix(in_oklch,var(--primary)_50%,transparent))]"
       />
       <span className="flex flex-col leading-tight">
