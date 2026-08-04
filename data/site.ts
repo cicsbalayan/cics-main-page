@@ -54,7 +54,8 @@ export const site = {
     description:
       "Stay up to date with enrollment schedules, events, seminars, and student activities. Click any post to read the full story.",
     readMore: "Read more",
-    dialogFooter:
+    backLabel: "Back to announcements",
+    footer:
       "For inquiries, visit the CICS office during office hours or reach out to us through the contact details at the bottom of this page.",
   },
   works: {
