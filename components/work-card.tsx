@@ -16,6 +16,10 @@ export function WorkCard({ work }: { work: Work }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-t from-primary-2/40 via-primary/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+        />
       </div>
       <CardContent className="flex flex-col gap-3">
         <div className="flex flex-wrap gap-1.5">

@@ -1,4 +1,5 @@
 import { navLinks, college, programs, site, links } from "@/data"
+import Image from "next/image"
 import {
   RiFacebookCircleLine,
   RiGithubLine,
@@ -8,14 +9,22 @@ import {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/60 bg-muted/30">
+    <footer className="relative">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary-2/60 to-transparent"
+      />
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center rounded-xl bg-primary font-heading text-sm font-bold text-primary-foreground">
-                {college.shortName.charAt(0)}
-              </span>
+              <Image
+                src="/cics_logo-removebg.png"
+                alt={`${college.shortName} logo`}
+                width={36}
+                height={36}
+                className="size-9 object-contain [filter:drop-shadow(0_0_8px_color-mix(in_oklch,var(--primary)_50%,transparent))]"
+              />
               <span className="font-heading text-sm font-semibold">
                 {college.shortName}
               </span>

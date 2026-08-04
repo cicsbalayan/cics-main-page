@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     template: site.seo.titleTemplate,
   },
   description: site.seo.description,
+  icons: {
+    icon: "/cics_logo-icon.ico",
+  },
 }
 
 export default function RootLayout({

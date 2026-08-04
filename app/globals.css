@@ -45,6 +45,8 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+    --color-primary-2: oklch(0.62 0.22 285);
+    --color-primary-3: oklch(0.75 0.15 225);
 }
 
 :root {
@@ -107,6 +109,21 @@
 
 @utility animate-float {
   animation: float 8s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(1.5rem, -1.5rem, 0) scale(1.15);
+    opacity: 1;
+  }
+}
+
+@utility animate-aurora {
+  animation: aurora 14s ease-in-out infinite;
 }
 
 @media (scripting: none) {

@@ -29,7 +29,7 @@ export function Programs({ items = programs }: ProgramsProps) {
   const Icon = programIcons[program.icon]
 
   return (
-    <section className="scroll-mt-20 bg-muted/40 py-20 sm:py-24">
+    <section className="scroll-mt-20 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <SectionHeading
@@ -45,7 +45,7 @@ export function Programs({ items = programs }: ProgramsProps) {
             <Card className="h-full transition-all hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="flex h-full flex-col gap-4">
                 <div className="flex items-center justify-between">
-                  <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-linear-to-br from-primary/30 via-primary/20 to-primary-2/30 text-primary-foreground shadow-[0_0_20px_-6px] shadow-primary/40">
                     <Icon />
                   </div>
                   <Badge>{program.code}</Badge>

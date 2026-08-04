@@ -28,6 +28,13 @@ export function SectionHeading({
       <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl">
         {title}
       </h2>
+      <span
+        aria-hidden
+        className={cn(
+          "mt-4 block h-1 w-20 rounded-full bg-white",
+          align === "center" && "mx-auto"
+        )}
+      />
       {description && (
         <p className="mt-4 text-pretty text-muted-foreground">{description}</p>
       )}

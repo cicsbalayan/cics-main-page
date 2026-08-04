@@ -4,7 +4,6 @@ import * as React from "react"
 import Image from "next/image"
 
 import { AnnouncementCard } from "@/components/announcement-card"
-import { Badge } from "@/components/ui/badge"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import {
@@ -73,11 +72,10 @@ export function Announcements({ items = announcements }: AnnouncementsProps) {
           {selected && (
             <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <Badge className="w-fit">{selected.category}</Badge>
                 <DialogTitle className="pt-2 text-xl leading-snug font-bold">
                   {selected.title}
                 </DialogTitle>
-                <DialogDescription>
+                <DialogDescription render={<div />}>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1">
                     <span className="inline-flex items-center gap-1">
                       <RiCalendarEventLine className="size-4" />
@@ -97,6 +95,10 @@ export function Announcements({ items = announcements }: AnnouncementsProps) {
                   fill
                   sizes="40rem"
                   className="object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-linear-to-t from-primary-2/30 via-transparent to-transparent"
                 />
               </div>
               <div className="flex flex-col gap-4 text-sm leading-relaxed">

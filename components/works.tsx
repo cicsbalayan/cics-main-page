@@ -13,7 +13,7 @@ type WorksProps = {
 
 export function Works({ items = works }: WorksProps) {
   return (
-    <section id="works" className="scroll-mt-20 bg-muted/40 py-20 sm:py-24">
+    <section id="works" className="scroll-mt-20 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>

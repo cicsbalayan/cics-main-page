@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 
-import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { site } from "@/data"
 import type { Announcement } from "@/lib/types"
@@ -29,7 +28,10 @@ export function AnnouncementCard({
           sizes="(max-width: 640px) 100vw, 50vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <Badge className="absolute top-4 left-4">{announcement.category}</Badge>
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-t from-primary-2/40 via-primary/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+        />
       </div>
       <CardContent className="flex flex-1 flex-col gap-3">
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
@@ -51,7 +53,7 @@ export function AnnouncementCard({
         <button
           type="button"
           onClick={() => onRead(announcement)}
-          className="mt-auto inline-flex w-fit items-center gap-1 text-sm font-medium text-primary hover:underline"
+          className="mt-auto inline-flex w-fit items-center gap-1 text-sm font-medium text-white hover:underline"
         >
           {site.announcements.readMore}
           <RiArrowRightLine className="size-4" />
