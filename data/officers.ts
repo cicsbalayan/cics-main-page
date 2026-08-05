@@ -54,7 +54,7 @@ export const officers: Officer[] = [
     id: "officer-8",
     name: "Yhuan Miguelle Domingo",
     position: "Public Relations Officer",
-    image: "/images/coming-soon.png",
+    image: "/images/yhuan-fav.jpg",
     portfolio: "https://www.facebook.com/yhuan.domingo.12",
   },
   {
