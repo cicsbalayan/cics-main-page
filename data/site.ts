@@ -3,10 +3,10 @@ import { links } from "./links"
 
 export const site = {
   seo: {
-    title: "CICS — College of Informatics and Computing Sciences",
+    title: "CICS Balayan Website",
     titleTemplate: "%s | CICS BSU Balayan",
     description:
-      "Official landing page of the College of Informatics and Computing Sciences — Batangas State University, The National Engineering University, Balayan Campus.",
+      "Landing page of the College of Informatics and Computing Sciences — Batangas State University, The National Engineering University, Balayan Campus.",
   },
   header: {
     logoTagline: "BatStateU TNEU Balayan",
