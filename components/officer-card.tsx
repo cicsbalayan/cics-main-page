@@ -33,10 +33,10 @@ export function OfficerCard({ officer }: { officer: Officer }) {
         className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-black/10"
       />
       <CardContent className="relative flex h-full flex-col items-start justify-end ">
-        <h3 className="font-heading text-lg font-semibold text-balance text-white">
+        <h3 className="font-heading text-md font-semibold text-balance uppercase text-white">
           {officer.name}
         </h3>
-        <p className="text-xs font-medium tracking-wide text-white/70 uppercase">
+        <p className="text-xs font-light tracking-wide text-white/60">
           {officer.position}
         </p>
         {officer.portfolio && (
