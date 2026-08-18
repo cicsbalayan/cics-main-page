@@ -61,7 +61,7 @@ export const officers: Officer[] = [
     id: "officer-9",
     name: "John Ramwell Dimazana",
     position: "Business Manager",
-    image: "/images/coming-soon.png",
+    image: "/images/ramwell-fav.jpg",
     portfolio: "https://www.facebook.com/johnramwell.dimazana",
   },
   {
@@ -82,7 +82,7 @@ export const officers: Officer[] = [
     id: "officer-12",
     name: "John Harry Casanova",
     position: "Committee on Publicity",
-    image: "/images/coming-soon.png",
+    image: "/images/harry-fav.jpg",
     portfolio: "https://www.facebook.com/avonasacyrrah03",
   },
 ]

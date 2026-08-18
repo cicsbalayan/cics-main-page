@@ -10,7 +10,7 @@ export const programs: Program[] = [
     specializations: [
       "Software & Web Development",
       "Mobile Application Development",
-      "Networking & Cybersecurity",
+      "Networking",
       "Database Management",
     ],
     careerPaths: [
@@ -18,7 +18,6 @@ export const programs: Program[] = [
       "Network Administrator",
       "Database Administrator",
       "Systems Analyst",
-      "Cybersecurity Analyst",
       "IT Support Specialist",
     ],
   },

@@ -19,9 +19,9 @@ export const services: Service[] = [
   },
   {
     id: "service-3",
-    title: "Finding TBA",
+    title: "Project C.L.E.A.R",
     description:
-      "A system for students to access certain information related to the college and campus, such as room location and many more.",
+      "A transparent and efficient system for managing student funds and expenses, ensuring clarity and accountability.",
     icon: "library",
     // href: "https://...
   },
