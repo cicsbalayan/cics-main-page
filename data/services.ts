@@ -7,7 +7,7 @@ export const services: Service[] = [
     description:
       "A dedicated support system for students, providing guidance and assistance throughout their academic journey.",
     icon: "support",
-    // href: "https://...
+    href: "https://guide-gave-me-you.vercel.app",
   },
   {
     id: "service-2",
