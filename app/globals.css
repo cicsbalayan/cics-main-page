@@ -126,6 +126,13 @@
   animation: aurora 14s ease-in-out infinite;
 }
 
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (scripting: none) {
   .reveal-target {
     opacity: 1 !important;

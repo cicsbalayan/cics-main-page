@@ -77,6 +77,14 @@ export const programs: Program[] = [
         totalLab: 12,
       },
       {
+        year: "Second Year",
+        semester: "Midterm",
+        courses: [],
+        totalUnits: 0,
+        totalLec: 0,
+        totalLab: 0,
+      },
+      {
         year: "Third Year",
         semester: "First Semester",
         courses: [

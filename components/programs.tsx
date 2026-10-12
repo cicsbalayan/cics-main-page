@@ -1,12 +1,12 @@
 "use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Dialog,
+  DialogClose,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Reveal } from "@/components/reveal"
@@ -15,6 +15,7 @@ import { programs, site } from "@/data"
 import type { CurriculumSemester, Program } from "@/lib/types"
 import {
   RiBookOpenLine,
+  RiCloseLine,
   RiCodeSSlashLine,
   RiDatabase2Line,
   RiGlobalLine,
@@ -29,9 +30,10 @@ const programIcons = {
 } as const
 
 function CurriculumTable({ sem }: { sem: CurriculumSemester }) {
+  if (sem.courses.length === 0) return null
+
   return (
     <div className="mb-6 last:mb-0">
-      {/* Semester header */}
       <div className="mb-2 rounded-xl bg-primary/10 px-4 py-2 ring-1 ring-primary/20">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary/80">
           {sem.year}
@@ -41,29 +43,16 @@ function CurriculumTable({ sem }: { sem: CurriculumSemester }) {
         </p>
       </div>
 
-      {/* Table */}
-      <div className="overflow-x-auto rounded-xl ring-1 ring-border">
+      <div className="overflow-x-auto rounded-xl ring-1 ring-border scrollbar-hide">
         <table className="w-full text-xs">
           <thead>
             <tr className="border-b border-border bg-muted/60">
-              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">
-                Code
-              </th>
-              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">
-                Course Title
-              </th>
-              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">
-                Units
-              </th>
-              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">
-                Lec
-              </th>
-              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">
-                Lab
-              </th>
-              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">
-                Prerequisite
-              </th>
+              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">Code</th>
+              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">Course Title</th>
+              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">Units</th>
+              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">Lec</th>
+              <th className="px-3 py-2 text-center font-semibold text-muted-foreground">Lab</th>
+              <th className="px-3 py-2 text-left font-semibold text-muted-foreground">Prerequisite</th>
             </tr>
           </thead>
           <tbody>
@@ -76,39 +65,21 @@ function CurriculumTable({ sem }: { sem: CurriculumSemester }) {
                     : "border-b border-border/50 bg-muted/20"
                 }
               >
-                <td className="px-3 py-2 font-mono font-semibold text-primary">
-                  {course.code}
-                </td>
+                <td className="whitespace-nowrap px-3 py-2 font-mono font-semibold text-primary">{course.code}</td>
                 <td className="px-3 py-2 text-foreground/90">{course.title}</td>
-                <td className="px-3 py-2 text-center text-muted-foreground">
-                  {course.units}
-                </td>
-                <td className="px-3 py-2 text-center text-muted-foreground">
-                  {course.lec}
-                </td>
-                <td className="px-3 py-2 text-center text-muted-foreground">
-                  {course.lab}
-                </td>
-                <td className="px-3 py-2 text-muted-foreground">
-                  {course.prerequisite ?? "—"}
-                </td>
+                <td className="px-3 py-2 text-center text-muted-foreground">{course.units}</td>
+                <td className="px-3 py-2 text-center text-muted-foreground">{course.lec}</td>
+                <td className="px-3 py-2 text-center text-muted-foreground">{course.lab}</td>
+                <td className="whitespace-nowrap px-3 py-2 text-muted-foreground">{course.prerequisite ?? "—"}</td>
               </tr>
             ))}
           </tbody>
           <tfoot>
             <tr className="bg-primary/5 font-semibold">
-              <td colSpan={2} className="px-3 py-2 text-right text-foreground/70">
-                TOTAL
-              </td>
-              <td className="px-3 py-2 text-center text-foreground">
-                {sem.totalUnits}
-              </td>
-              <td className="px-3 py-2 text-center text-foreground">
-                {sem.totalLec}
-              </td>
-              <td className="px-3 py-2 text-center text-foreground">
-                {sem.totalLab}
-              </td>
+              <td colSpan={2} className="px-3 py-2 text-right text-foreground/70">TOTAL</td>
+              <td className="px-3 py-2 text-center text-foreground">{sem.totalUnits}</td>
+              <td className="px-3 py-2 text-center text-foreground">{sem.totalLec}</td>
+              <td className="px-3 py-2 text-center text-foreground">{sem.totalLab}</td>
               <td />
             </tr>
           </tfoot>
@@ -141,7 +112,7 @@ export function Programs({ items = programs }: ProgramsProps) {
         <div className="mt-12">
           <Reveal delay={100}>
             <Card className="transition-all hover:-translate-y-1 hover:shadow-lg">
-              <CardContent className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+              <CardContent className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 {/* Left: icon + title + description */}
                 <div className="flex flex-col gap-4 sm:max-w-xl">
                   <div className="flex items-center gap-3">
@@ -158,28 +129,48 @@ export function Programs({ items = programs }: ProgramsProps) {
                   </p>
                 </div>
 
-                {/* Right: curriculum button */}
-                <div className="flex shrink-0 items-center sm:pt-1">
+                {/* Right: View Curriculum button */}
+                <div className="shrink-0">
                   <Dialog>
-                    <DialogTrigger render={<Button size="lg" className="gap-2" />}>
+                    <DialogTrigger render={<Button size="lg" className="w-full gap-2 sm:w-auto" />}>
                       <RiBookOpenLine className="size-4" />
                       View Curriculum
                     </DialogTrigger>
 
+                    {/*
+                      showCloseButton={false} — we manage our own sticky close button
+                      No overflow on DialogContent itself — the inner div scrolls instead
+                    */}
                     <DialogContent
-                      showCloseButton
-                      className="max-h-[85vh] max-w-4xl overflow-y-auto"
+                      showCloseButton={false}
+                      className="flex max-h-[85vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-hidden p-0"
                     >
-                      <DialogHeader>
-                        <DialogTitle className="font-heading text-lg font-bold">
-                          {program.code} — Curriculum
-                        </DialogTitle>
-                        <p className="text-xs text-muted-foreground">
-                          New Curriculum · AY 2025–2026
-                        </p>
-                      </DialogHeader>
+                      {/* Sticky header with close button */}
+                      <div className="flex items-start justify-between border-b border-border px-5 py-4 sm:px-6">
+                        <div className="flex flex-col gap-0.5">
+                          <h2 className="font-heading text-lg font-bold">
+                            {program.code} — Curriculum
+                          </h2>
+                          <p className="text-xs text-muted-foreground">
+                            New Curriculum · AY 2025–2026
+                          </p>
+                        </div>
+                        <DialogClose
+                          render={
+                            <Button
+                              variant="ghost"
+                              size="icon-sm"
+                              className="shrink-0 bg-secondary"
+                            />
+                          }
+                        >
+                          <RiCloseLine />
+                          <span className="sr-only">Close</span>
+                        </DialogClose>
+                      </div>
 
-                      <div className="mt-2">
+                      {/* Scrollable body */}
+                      <div className="overflow-y-auto scrollbar-hide px-5 py-4 sm:px-6">
                         {program.curriculum.map((sem, i) => (
                           <CurriculumTable key={i} sem={sem} />
                         ))}
