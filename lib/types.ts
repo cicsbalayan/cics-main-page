@@ -21,13 +21,30 @@ export type Work = {
   year: string
 }
 
+export type Course = {
+  code: string
+  title: string
+  units: number
+  lec: number
+  lab: number
+  prerequisite?: string
+}
+
+export type CurriculumSemester = {
+  year: string
+  semester: string
+  courses: Course[]
+  totalUnits: number
+  totalLec: number
+  totalLab: number
+}
+
 export type Program = {
   code: string
   title: string
   description: string
   icon: "database" | "code" | "network" | "device"
-  specializations: string[]
-  careerPaths: string[]
+  curriculum: CurriculumSemester[]
 }
 
 export type Service = {
